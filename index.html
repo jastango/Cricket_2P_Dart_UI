@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Font Awesome Icons  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Cricket | 2P</title>
+</head>
+
+<body>
+
+    <!-- Dart Board Numbers -->
+    <div class="container">
+        <div class="row">
+            <div class="card p-1 m-1 col bg-light">
+                <div class="card-body">
+                    <h4 class='text-center mb-3'>20</h4>
+                    <ul class="list-unstyled text-center">
+                        <li class='p-1'><input type="submit" class="btn btn-info" id="s-20" value="Single"></li>
+                        <li class='p-1'><input type="submit" class="btn btn-success" id="d-20" value="Double"></li>
+                        <li class='p-1'><input type="submit" class="btn btn-danger" id="t-20" value="Triple"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card p-1 m-1 col bg-light">
+                <div class="card-body">
+                    <h4 class='text-center mb-3'>19</h4>
+                    <ul class="list-unstyled text-center">
+                        <li class='p-1'><input type="submit" class="btn btn-info" id="s-19" value="Single"></li>
+                        <li class='p-1'><input type="submit" class="btn btn-success" id="d-19" value="Double"></li>
+                        <li class='p-1'><input type="submit" class="btn btn-danger" id="t-19" value="Triple"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card p-1 m-1 col bg-light">
+                <div class="card-body">
+                    <h4 class='text-center mb-3'>18</h4>
+                    <ul class="list-unstyled text-center">
+                        <li class='p-1'><input type="submit" class="btn btn-info" id="s-18" value="Single"></li>
+                        <li class='p-1'><input type="submit" class="btn btn-success" id="d-18" value="Double"></li>
+                        <li class='p-1'><input type="submit" class="btn btn-danger" id="t-18" value="Triple"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card p-1 m-1 col bg-light">
+                <div class="card-body">
+                    <h4 class='text-center mb-3'>17</h4>
+                    <ul class="list-unstyled text-center">
+                        <li class='p-1'><input type="submit" class="btn btn-info" id="s-17" value="Single"></li>
+                        <li class='p-1'><input type="submit" class="btn btn-success" id="d-17" value="Double"></li>
+                        <li class='p-1'><input type="submit" class="btn btn-danger" id="t-17" value="Triple"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card p-1 m-1 col bg-light">
+                <div class="card-body">
+                    <h4 class='text-center mb-3'>16</h4>
+                    <ul class="list-unstyled text-center">
+                        <li class='p-1'><input type="submit" class="btn btn-info" id="s-16" value="Single"></li>
+                        <li class='p-1'><input type="submit" class="btn btn-success" id="d-16" value="Double"></li>
+                        <li class='p-1'><input type="submit" class="btn btn-danger" id="t-16" value="Triple"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card p-1 m-1 col bg-light">
+                <div class="card-body">
+                    <h4 class='text-center mb-3'>15</h4>
+                    <ul class="list-unstyled text-center">
+                        <li class='p-1'><input type="submit" class="btn btn-info" id="s-15" value="Single"></li>
+                        <li class='p-1'><input type="submit" class="btn btn-success" id="d-15" value="Double"></li>
+                        <li class='p-1'><input type="submit" class="btn btn-danger" id="t-15" value="Triple"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card p-1 m-1 col" style="border:none; background-color: #f4f4f4;">
+                <div class="card-body" id="bull-and-miss">
+                    <ul class="list-unstyled text-center">
+                        <li class="p-1 m-1"><input type="submit" class="btn btn-danger p-2" value="Single Bull"
+                                id="s-bull">
+                        </li>
+                        <li class="p-1 m-1"><input type="submit" class="btn btn-dark p-2" value="Double Bull"
+                                id="d-bull">
+                        </li>
+                        <li class="p-1 m-1"><input type="submit" class="btn btn-info p-2" id="miss" value="Miss">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <!--Score Section  -->
+    <section id="player-scores">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h5 class="lead small text-center">Rd: <h5 class="text-center" id="round">1</h5>
+                    </h5>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col">
+                    <h4 class='text-left'><span class="p-1" id="player1-heading">Player 1</span> <img src="dart.png"
+                            id="p1-dart-1" style="width: 30px; height: auto;"> <img src="dart.png" id="p1-dart-2"
+                            style="width: 30px; height: auto;"><img src="dart.png" id="p1-dart-3"
+                            style="width: 30px; height: auto;"></h4>
+                    <h5>Score: &nbsp;&nbsp; <span class='text-success' id='p1-points'></span> </h5>
+                    <ul class='list-unstyled text-left'>
+                        <li class='p-1 font-weight-bold'>20: &nbsp;&nbsp;<i id='p1-20'></i></li>
+                        <li class='p-1 font-weight-bold'>19: &nbsp;&nbsp;<i id='p1-19'></i></li>
+                        <li class='p-1 font-weight-bold'>18: &nbsp;&nbsp;<i id='p1-18'></i></li>
+                        <li class='p-1 font-weight-bold'>17: &nbsp;&nbsp;<i id='p1-17'></i></li>
+                        <li class='p-1 font-weight-bold'>16: &nbsp;&nbsp;<i id='p1-16'></i></li>
+                        <li class='p-1 font-weight-bold'>15: &nbsp;&nbsp;<i id='p1-15'> </i></li>
+                        <li class='p-1 font-weight-bold'>B: &nbsp;&nbsp;<i id='p1-bull'></i></li>
+                        <li class='p-1 font-weight-bold'>MPR: &nbsp;&nbsp;<i id='p1-mpr'></i></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <div>
+                        <h3 class="text-center text-success" id="winner"></h3>
+                        <div id="load-group-heading text-center">
+                            <p class="lead text-center" id="next-player">NEXT PLAYER ...</p>
+                        </div>
+                        <div id="play-again" class="text-center"><input type="submit" class='btn btn-info p-2'
+                                value="Play Again?"></div>
+                    </div>
+                </div>
+                <div class="col">
+                    <h4 class='text-right'><img src="dart.png" id="p2-dart-1" style="width: 30px; height: auto;"> <img
+                            src="dart.png" id="p2-dart-2" style="width: 30px; height: auto;"><img src="dart.png"
+                            id="p2-dart-3" style="width: 30px; height: auto;"> <span class="p-1"
+                            id="player2-heading">Player 2
+                        </span></h4>
+                    <h5 class='text-right'><span class="text-success" id='p2-points'></span>&nbsp;&nbsp;:Score</h5>
+                    <ul class='list-unstyled text-right'>
+                        <li class='p-1 font-weight-bold'><i id='p2-20'></i> &nbsp;&nbsp;:20</li>
+                        <li class='p-1 font-weight-bold'> <i id='p2-19'></i> &nbsp;&nbsp;:19</li>
+                        <li class='p-1 font-weight-bold'><i id='p2-18'></i> &nbsp;&nbsp;:18</li>
+                        <li class='p-1 font-weight-bold'><i id='p2-17'></i> &nbsp;&nbsp;:17</li>
+                        <li class='p-1 font-weight-bold'><i id='p2-16'></i> &nbsp;&nbsp;:16</li>
+                        <li class='p-1 font-weight-bold'><i id='p2-15'> </i> &nbsp;&nbsp;:15</li>
+                        <li class='p-1 font-weight-bold'><i id='p2-bull'></i> &nbsp;&nbsp;:B</li>
+                        <li class='p-1 font-weight-bold'><i id='p2-mpr'></i> &nbsp;&nbsp;:MPR</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

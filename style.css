@@ -1,0 +1,46 @@
+        body {
+            background: #f4f4f4;
+        }
+        
+        .fade {
+            opacity: .7;
+        }
+
+        #load-group {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #load-group-heading {
+            display: flex;
+        }
+        
+        #next-player {
+            animation: load 1.5s ease-in-out 4;
+        }
+
+        @keyframes load {
+            from {opacity: .9;}
+            to {opacity: .4;}
+        }
+
+        #player-scores {
+            font-size: 1.2rem;
+        }
+
+        .show {
+            display: inline-block;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        #bull-and-miss {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1.5rem;
+        }
+
